@@ -1,0 +1,64 @@
+.edit-reminder-page {
+  width: 412px;
+  min-height: 917px;
+  border-radius: 20px;
+  background: #fff;
+  margin: auto;
+  margin-top: 174px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 30px 44px;
+  margin-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+.edit-reminder-card {
+  width: 412px;
+  height: 917px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 30px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+.edit-reminder-image {
+  width: 420px;
+  height: 420px;
+  max-width: none;
+  margin-bottom: 30px;
+}
+
+.edit-reminder-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  margin-top: -50px;
+}
+
+.edit-reminder-subtitle {
+  font-size: 24px;
+  color: #0a8a8a;
+  margin: 6px 0 28px;
+}
+
+.edit-reminder-btn {
+  width: 200px;
+  height: 36px;
+  border-radius: 18px;
+  border: none;
+  background: #0a8a8a;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}

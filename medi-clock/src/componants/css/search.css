@@ -1,0 +1,88 @@
+.searchPage{
+    width :412px;
+    min-height: 917px;
+    border-radius: 20px;
+    background: #fff;
+    margin: auto;
+    margin-top: 174px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    padding: 30px 44px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+    font-family: "Parkinsans", sans-serif;
+    position:relative;
+    overflow: hidden;
+}
+.search-title {
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+/* TAB CONTAINER */
+.search-tabs {
+  display: flex;
+  justify-content: space-between;
+  gap:200px;
+  margin: 10px;
+  
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 6px;
+  margin-bottom: 16px;
+}
+
+/* TAB BUTTON */
+.tab-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  width: 100px;
+  padding: 10px 0;
+  border-radius: 22px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a8a8a;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* ACTIVE TAB */
+.tab-btn.active {
+  background: #0a8a8a;
+  color: #ffffff;
+}
+
+/* CARD LIST */
+.search-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 90px;
+}
+
+.search::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 160%;
+
+  opacity: 0.15      ;
+
+  z-index: 0;
+
+  transform: scale(1.2) translate(20px, 30px);
+}
+
+.search > * {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,58 @@
+.nav-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-nav {
+  width: 450px;
+  height: 70px;
+  background: #ffffff;
+  border-radius: 30px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  transition: all 0.2s ease; /* smooth resize */
+}
+
+/* 🔥 ACTIVE NAV ITEM (BIGGER CIRCLE) */
+.nav-item.active {
+  width: 54px;              /* ⬅️ increased */
+  height: 54px;             /* ⬅️ increased */
+  background: #0a8a8a;
+}
+
+/* 🔥 NAV ICON */
+.nav-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+
+  filter: invert(0);
+  transition: filter 0.2s ease;
+}
+
+/* 🔥 ACTIVE ICON → WHITE */
+.nav-item.active .nav-icon {
+  filter: brightness(0) invert(1);
+}

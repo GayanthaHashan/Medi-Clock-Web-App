@@ -1,0 +1,119 @@
+.Home{
+    width :412px;
+    min-height: 917px;
+    border-radius: 20px;
+    background: #fff;
+    margin: auto;
+    margin-top: 174px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: "Parkinsans", sans-serif;
+    gap: 10px;
+    padding: 30px 44px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+    
+    position:relative;
+    overflow: hidden;
+}
+
+.add-medicine-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+}
+
+.add-medicine-btn {
+  width: 400px;
+  height:130px;
+
+  background: #0a8a8a;
+  color: white;
+
+  border: none;
+  border-radius: 18px;
+
+  font-size: 30px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: block;
+  margin: 50px auto;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.welcome{
+  font-family: "Montserrat", sans-serif;
+  margin: -1px;
+  margin-right: 50px;
+  margin-top: -10px;
+}
+
+.resent-part{
+  display: flex;
+  gap: 7px;
+}
+
+.Recent-text{
+  margin-top: 20px;
+ margin-right: 360px;
+ font-size: 18px;
+}
+
+.W1 {
+  font-size: 65px;
+  margin-bottom: 4px;
+}
+
+.W2 {
+  font-size: 34px;
+  
+}
+
+.W3 {
+ 
+  font-size: 24px;
+  color: #058192;
+}
+.W1,
+.W3 {
+  
+  margin: 0;              
+  line-height: 1.2; 
+  margin-right: 76px;
+}
+.W2{
+  margin: 0;              
+  line-height: 1.4.1; 
+  margin-right: 73px;
+}
+
+.Homeimage{
+  align-self: flex-start;
+  margin-top: 60px;
+}
+
+.Home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 160%;
+
+  opacity: 0.15      ;
+
+  z-index: 0;
+
+  transform: scale(1.2) translate(20px, 30px);
+}
+
+.Home > * {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,164 @@
+.Profile {
+    width :412px;
+    min-height: 917px;
+    border-radius: 20px;
+    background: #fff;
+    margin: auto;
+    margin-top: 174px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+    gap: 10px;
+    padding: 30px 44px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+    font-family: "Parkinsans", sans-serif;
+    position:relative;
+    overflow: hidden;
+}
+
+.profile-header {
+  font-family: "Parkinsans", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  margin-top: 41px;
+  margin-right: 0px;
+}
+
+.head-text{
+    display: flex;
+    flex-direction: column;
+    margin-top: -70px;
+    padding: 10px;
+}
+h2{
+    font-size: 28px;
+    margin: none;
+}
+.Email{
+    font-size: 40px;
+}
+
+h2,p{
+   margin: 0;              
+  line-height: 1.1; 
+  
+}
+.profile-avatar {
+  width: 175px;
+  height: 175px;
+  border-radius: 16px;
+  object-fit: cover;
+  background: #e0e0e0;
+}
+
+.profile-info h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.profile-info p {
+  margin: 0;
+  margin-top: 7px;
+  font-size: 15px;
+  color: #777;
+}
+
+.profile-edit-btn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  
+}
+
+.profile-edit-btn {
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+  margin-right: 220px;
+
+  width: 50px;
+  height: 50px;
+
+  border: none; 
+  border-radius: 10px; 
+
+  background-color: #ffffff;
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  transition: box-shadow 0.2s ease;
+  padding: 0;
+
+  
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+
+}
+
+.profile-edit-btn :hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.3);
+}
+
+.Profile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 160%;
+
+  opacity: 0.15      ;
+
+  z-index: 0;
+
+  transform: scale(1.2) translate(20px, 30px);
+}
+
+.profile > * {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.Hprofile-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.Fprofile-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+

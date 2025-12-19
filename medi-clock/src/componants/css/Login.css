@@ -1,0 +1,132 @@
+
+
+.login{
+    width :412px;
+    height: 917px;
+    border-radius: 20px;
+    background: #fff;
+    margin: auto;
+    margin-top: 174px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: "Parkinsans", sans-serif;
+    gap: 10px;
+    padding: 30px 44px;
+    padding-bottom: 30px;
+    margin-bottom: 100px;
+    
+    position:relative;
+    overflow: hidden;
+}
+
+
+.he1{
+    margin:0;
+    text-align: center;
+    font-size: 50px;
+
+}
+.he2{
+    margin:0;
+    text-align: center;
+    font-size: 18px;
+}
+.header{
+    color: black;
+    font-size:36px;
+    font-weight: 600;
+    margin-top: 190px;
+    margin-bottom: -120px;
+    position: absolute;
+    
+}
+
+.header2{
+    color: black;
+    font-size:36px;
+    font-weight: 600;
+    transform: translateY(-80px);
+    margin-bottom: 80px;
+}
+
+.logo {
+  width: 341px;
+  height: 341px;
+  object-fit: contain;
+  transform: translateY(-80px);
+  
+}
+
+.loginbutton{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+
+.dis{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    padding-top: 1px;
+}
+.logo2 {
+  
+  width: 600px;
+  height: auto;
+  clip-path: inset(0 0 0 0); 
+  position:absolute;
+  bottom: -0px;  
+  transform:rotate(-20deg);
+  transform-origin:center;
+  opacity: 0.4;
+  mix-blend-mode: multiply;
+}
+
+.us{
+    
+    color:rgb(0, 101, 252);
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    
+}
+
+.Userdetails2{
+/*none*/
+}
+
+.loginbutton2{
+    margin-top:30px;
+}
+
+.forgot{
+ margin-top:20px;
+ color:blue;
+}
+
+.login::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 160%;
+
+  opacity: 0.15      ;
+
+  z-index: 0;
+
+  transform: scale(1.2) translate(20px, 30px);
+}
+
+.login > * {
+  position: relative;
+  z-index: 1;
+}
+
+

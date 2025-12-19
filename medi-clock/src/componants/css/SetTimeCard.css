@@ -1,0 +1,47 @@
+/* Container */
+.time-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.time-card {
+  width: 140px;
+  height: 120px;
+  background: #ffffff;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Time */
+.time-text {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  line-height: 1;
+}
+
+/* AM / PM */
+.ampm-text {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* EDIT Button */
+.set-edit-btn {
+  width: 70px;
+  height: 22px;
+  background: #1bb5a8;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}

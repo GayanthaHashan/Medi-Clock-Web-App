@@ -1,0 +1,127 @@
+.distant-page {
+  width: 412px;
+  min-height: 917px;
+  border-radius: 20px;
+  background: #fff;
+  margin: auto;
+  margin-top: 174px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  padding: 30px 44px;
+  padding-bottom: 30px;
+  margin-bottom: 100px;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.distant-card {
+  width: 412px;
+  height: 917px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.Dback-button {
+  width: 50px;
+  height: 50px;
+
+  border: none; 
+  border-radius: 10px; 
+
+  background-color: #ffffff;
+
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+
+  transition: box-shadow 0.2s ease;
+  padding: 0;
+
+  
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.Dback-btn img {
+  width: 24px; 
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
+.title {
+  margin-top: 14px;
+  font-size: 35px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #0a8a8a;
+  margin-bottom: 24px;
+}
+
+.device-buttons {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.device-btn {
+  flex: 1;
+  height: 36px;
+  border-radius: 20px;
+  border: none;
+  background: #dcdcdc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.device-btn.active {
+  background: #0a8a8a;
+  color: white;
+}
+
+/* REMINDER TYPE */
+.section-label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.Dsave-btn {
+  align-items: center;
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background: #0a8a8a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Dsave {
+  align-content: center;
+  padding-right: -70px;
+  padding-left: 120px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  font-size: 11px;
+  margin-bottom: 30px;
+}

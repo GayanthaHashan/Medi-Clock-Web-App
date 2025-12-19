@@ -1,0 +1,40 @@
+.button{
+    border: none;
+    border-radius: 50px;
+    background: #1C5569;
+    width: 162px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size:16px;
+    font-weight: 600;
+    cursor:pointer;
+    position: relative;
+    overflow: hidden; /* important for animation */
+    transition: color 0.3s ease;
+    
+
+}
+.button::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: #058192; /* hover color */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transition: 0.5s ease;
+    z-index: 0;
+}
+.button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+.button span {
+    position: relative;
+    z-index: 1;
+}

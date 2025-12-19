@@ -1,0 +1,66 @@
+.medicine-card {
+  width: 410px;
+  height: 80px;
+  padding: 12px;
+  font-family: Arial, sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;        /* horizontal center */
+  justify-content: center;    /* vertical center */
+
+  gap: 8px;                   /* spacing between buttons & input */
+}
+
+/* BUTTON ROW */
+.mode-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+/* BUTTON */
+.tab {
+  background: #0a8a8a;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.6;
+}
+
+.tab.active {
+  opacity: 1;
+}
+
+/* UNDERLINE */
+.tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+  background: #3fffe0;
+}
+
+/* INPUT WRAPPER */
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* input centered */
+}
+
+/* INPUT */
+.medicine-input {
+  width: 93%;
+  height: 34px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding: 0 14px;
+  font-size: 12px;
+  outline: none;
+  margin-top: 10px;
+}
