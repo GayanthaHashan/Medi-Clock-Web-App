@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/AddMedicinee.css";
 
@@ -9,9 +9,26 @@ import SetTimeCard from "./SetTimeCard";
 const AddMedicinee = () => {
   const navigate = useNavigate();
 
-  // 🔹 NEW STATES (ONLY ADDITION)
-  const [mealType, setMealType] = useState("before"); // before | after
-  const [dateType, setDateType] = useState("today");  // today | set
+  const [rounds, setRounds] = useState(() => {
+  const saved = localStorage.getItem("addmed-rounds");
+  return saved ? saved : "";
+});
+
+  useEffect(() => {
+  localStorage.setItem("addmed-rounds", rounds);
+}, [rounds]);
+
+  const handleSetReminder = () => {
+  if (!rounds || Number(rounds) <= 0) {
+    alert("Invalid Round Count");
+    return;
+  }
+
+  navigate("/AddMedicine2");
+};
+
+  const [mealType, setMealType] = useState("before"); 
+  const [dateType, setDateType] = useState("today"); 
 
   return (
     <div className="add-medicine-page1">
@@ -33,11 +50,20 @@ const AddMedicinee = () => {
 
         <label className="tag-size-edit">Taking Rounds</label>
         <input
-          className="text-input"
-          placeholder="How many rounds do you take this in a Day"
-        />
+         className="text-input"
+         placeholder="How many rounds do you take this in a Day"
+         value={rounds}
+         onChange={(e) => {
+         const value = e.target.value;
 
-        {/* 🔹 MEAL TOGGLE */}
+    if (!/^\d*$/.test(value)) {
+      alert("Invalid Round Count");
+      return;
+    }
+
+    setRounds(value);
+  }}
+/>
         <div className="meal-buttons">
           <button
             className={`meal-btn ${mealType === "before" ? "active" : ""}`}
@@ -57,7 +83,6 @@ const AddMedicinee = () => {
         <label className="tag-size-edit">Dose</label>
         <DoseCard />
 
-        {/* 🔹 DATE TOGGLE */}
         <label className="tag-size-edit">Date</label>
         <div className="date-buttons">
           <button
@@ -93,7 +118,7 @@ const AddMedicinee = () => {
         </div>
 
         <div className="add-action-btn">
-          <button className="setR" onClick={() => navigate("/AddMedicine2")}>
+          <button className="setR" onClick={handleSetReminder}>
             SET REMINDER
           </button>
           <button
