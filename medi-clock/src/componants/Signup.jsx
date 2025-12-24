@@ -24,7 +24,7 @@ const Signup = () => {
     <input type="password" placeholder='Password Here' className='Sinput' />
 </div>
 
-      <div className='signupbutton'><button className='button' onClick={() => navigate("/Signup2")}><span>SIGN UPpp</span></button></div>
+      <div className='signupbutton'><button className='button' onClick={() => navigate("/Signup2")}><span>SIGN UP</span></button></div>
       <img src={logo3} alt="logo3" className='logo3'/>
     </div>
   )
