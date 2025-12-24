@@ -12,7 +12,6 @@ const profile = () => {
   return (
     <div className="Profile">
 
-      {/* PROFILE HEADER */}
       <div className="profile-header">
         <img src={profileImg} alt="Profile" className="profile-avatar" />
         <div className="head-text">
@@ -28,7 +27,6 @@ const profile = () => {
         </div>
       </div>
 
-      {/* RECENT SETTLED */}
       <div className="profile-section">
         <h4 className="section-title">Recent Settled</h4>
 
@@ -39,7 +37,6 @@ const profile = () => {
         </div>
       </div>
 
-      {/* CURRENT RUNNING */}
       <div className="profile-section">
         <h4 className="section-title">Current Running</h4>
 
