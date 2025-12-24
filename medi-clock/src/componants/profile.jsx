@@ -44,8 +44,8 @@ const profile = () => {
         <h4 className="section-title">Current Running</h4>
 
         <div className="Fprofile-cards">
-          <FindMedicineCard editable />
-          <FindMedicineCard editable />
+          <FindMedicineCard id={1} editable />
+          <FindMedicineCard id={3} editable />
           
           
         </div>
