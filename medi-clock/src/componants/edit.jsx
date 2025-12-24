@@ -21,11 +21,11 @@ const Edit = () => {
       </div>
 
       <div className="edit-cards">
-        <FindMedicineCard />
-        <FindMedicineCard />
-        <FindMedicineCard />
-        <FindMedicineCard />
-        <FindMedicineCard />
+        <FindMedicineCard id={1} />
+        <FindMedicineCard id={2} />
+        <FindMedicineCard id={3} />
+        <FindMedicineCard id={4} />
+        <FindMedicineCard id={5} />
         
         
       </div>

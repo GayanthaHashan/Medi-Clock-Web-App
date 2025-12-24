@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/EditMedicine.css";
 
@@ -9,9 +9,23 @@ import SetTimeCard from "./SetTimeCard";
 const EditMedicine = () => {
   const navigate = useNavigate();
 
+  
+  const [mealType, setMealType] = useState(() => {
+  return localStorage.getItem("edit-mealType") || "before";
+});
 
-  const [mealType, setMealType] = useState("before"); 
-  const [dateType, setDateType] = useState("today");
+const [dateType, setDateType] = useState(() => {
+  return localStorage.getItem("edit-dateType") || "today";
+});
+
+
+  useEffect(() => {
+  localStorage.setItem("edit-mealType", mealType);
+}, [mealType]);
+
+useEffect(() => {
+  localStorage.setItem("edit-dateType", dateType);
+}, [dateType]);
 
   return (
     <div className="edit-medicine-page">
@@ -66,9 +80,9 @@ const EditMedicine = () => {
 
         <label className="edit-tag">Time</label>
         <div className="edit-time-scroll">
-          <SetTimeCard />
-          <SetTimeCard />
-          <SetTimeCard />
+          <SetTimeCard  />
+          <SetTimeCard  />
+          <SetTimeCard  />
         </div>
 
         <label className="edit-reminder-head">Reminder Type</label>

@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./css/FindMedicineCard.css";
 
-const FindMedicineCard = () => {
-  const [isOn, setIsOn] = useState(true);
+const FindMedicineCard = ({id}) => {
+  const storageKey = `find-medicine-card-${id}`;
+
+const [isOn, setIsOn] = useState(() => {
+  const saved = localStorage.getItem(storageKey);
+  return saved !== null ? JSON.parse(saved) : true;
+});
+
+  useEffect(() => {
+  localStorage.setItem(storageKey, JSON.stringify(isOn));
+}, [isOn, storageKey]);
+
+
   const navigate = useNavigate();
 
   return (
     <div className={`medicine-cardd ${isOn ? "active" : "inactive"}`}>
 
-      {/* LEFT CONTENT */}
       <div className="card-textt">
         <h3>Paracetamol</h3>
         <p className="timee">
@@ -18,10 +28,8 @@ const FindMedicineCard = () => {
         <p className="desc">Two Pills after meal</p>
       </div>
 
-      {/* RIGHT ACTIONS */}
       <div className="card-actionss">
 
-        {/* TOGGLE */}
         <label className="switchh">
           <input
             type="checkbox"
@@ -34,7 +42,6 @@ const FindMedicineCard = () => {
           </span>
         </label>
 
-        {/* EDIT BUTTON */}
         <button
           className="edit-button"
           disabled={!isOn}
