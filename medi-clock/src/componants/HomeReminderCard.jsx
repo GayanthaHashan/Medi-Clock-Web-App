@@ -1,12 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './css/HomeReminderCard.css';
 
 const HomeReminderCard = ({ id }) => {
-  const [isActive, setIsActive] = useState(true);
+  const storageKey = `reminder-active-${id}`;
+
+const [isActive, setIsActive] = useState(() => {
+  const saved = localStorage.getItem(storageKey);
+  return saved !== null ? JSON.parse(saved) : true;
+});
+
+  useEffect(() => {
+  localStorage.setItem(storageKey, JSON.stringify(isActive));
+}, [isActive, storageKey]);
+
   const navigate = useNavigate();
 
-  const toggleId = `toggle-${id}`; // 🔥 unique ID
+  const toggleId = `toggle-${id}`;
 
   return (
     <div className="Card-container">
@@ -21,7 +31,6 @@ const HomeReminderCard = ({ id }) => {
 
         <p className="desc">Two Pills after meal</p>
 
-        {/* SWITCH */}
         <div className="Hswitch">
           <input
             type="checkbox"
@@ -35,7 +44,6 @@ const HomeReminderCard = ({ id }) => {
           </label>
         </div>
 
-        {/* EDIT BUTTON */}
         <button
           className="b1"
           disabled={!isActive}
