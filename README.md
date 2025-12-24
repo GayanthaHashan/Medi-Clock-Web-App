@@ -13,4 +13,4 @@ GWU/HICT/2022/17
 
 Figma Design Limk of the Project - https://www.figma.com/design/mpEjIjv01kUAVfhwiZUeTe/SRS-PROJECT-SOFTWARE?node-id=0-1&t=uKADo0031KpF8f6g-1
 
-Used Lamguages - React | CSS 
+Used Languages - React | CSS 
